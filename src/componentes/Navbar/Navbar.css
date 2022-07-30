@@ -1,0 +1,22 @@
+.Navbar {
+    background-color: whitesmoke;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contieneTitutlo {
+    display: flex;
+    align-items: center;
+}
+
+.tituloNavbar {
+    font-size: 18px;
+}
+
+.contieneBotones{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
