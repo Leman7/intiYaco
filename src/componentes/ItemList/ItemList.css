@@ -1,0 +1,6 @@
+.contenedorCatalogo {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+}

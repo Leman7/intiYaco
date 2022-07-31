@@ -1,0 +1,17 @@
+.imagenesCatalogo {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.tituloProductos {
+    text-align: center;
+}
+
+.parrafoPrecio {
+    text-align: center;
+}
+
+.stockProductos {
+    text-align: center;
+}

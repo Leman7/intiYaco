@@ -4,10 +4,10 @@ import CarWidget from '../CarWidget/CarWidget'
 const Navbar = () => {
     return (
         <nav className="Navbar">
-            <div class="contieneTitutlo">  
-                <h1 class="tituloNavbar">Inti Yaco - Almacen Natural</h1>    
+            <div className="contieneTitutlo">  
+                <h1 className="tituloNavbar">Inti Yaco - Almacen Natural</h1>    
             </div>
-            <div class="contieneBotones">
+            <div className="contieneBotones">
                 <button>Almendras</button>
                 <button>Salsa de soja</button>
                 <button>Hamburguesas Veganas</button>

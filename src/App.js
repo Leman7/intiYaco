@@ -3,10 +3,12 @@ import Navbar from './componentes/Navbar/Navbar';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 
 function App() {
+
   return (
     <div className="App">
       <Navbar />
-      <ItemListContainer saludo='Bienvenidos a Inti Yaco'/>
+      <ItemListContainer saludo={'Nuestros productos'}/>
+      {/* <Counter /> */}
     </div>
   );
 }
