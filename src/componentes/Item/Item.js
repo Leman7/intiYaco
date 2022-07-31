@@ -2,9 +2,8 @@ import './Item.css'
 import Contador from '../Contador/Contador'
 
 const handleOnAdd = (quantity) => {
-    console.log(`la cantidad agregada es: ${quantity}`)
+    console.log(`Usted ha agregado: ${quantity} productos`)
 }
-
 
 const Item = ({productos}) => {
     return (
@@ -13,7 +12,7 @@ const Item = ({productos}) => {
             <img src={productos.imagen} alt={productos.nombre} className="imagenesCatalogo"/>
             <p className='parrafoPrecio'>${productos.precio}</p>
             <p className='stockProductos'>Stock disponible: {productos.stock}</p>
-            <Contador stock={10}/>
+            <Contador stock={10} onAdd={handleOnAdd}/>
         </li>
     )
 }
