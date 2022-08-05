@@ -4,7 +4,8 @@ const productos = [
         nombre: 'Almendras',
         precio: 1000,
         stock: 10,
-        imagen: 'imagenes/almendras.png'
+        imagen: 'imagenes/almendras.png',
+        categoria: 'frutos secos'
     },
 
     {
@@ -12,7 +13,8 @@ const productos = [
         nombre: 'Salsa de soja',
         precio: 1000,
         stock: 10,
-        imagen: 'imagenes/salsaSoja.png'
+        imagen: 'imagenes/salsaSoja.png',
+        categoria: 'salsas' 
     },
 
     {
@@ -20,7 +22,8 @@ const productos = [
         nombre: 'Hamburguesas veganas',
         precio: 1000,
         stock: 10,
-        imagen: 'imagenes/veganBurguer.png'
+        imagen: 'imagenes/veganBurguer.png',
+        categoria: 'carnes'
     }
 ]
 
@@ -28,6 +31,22 @@ export const obtenerProductos = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(productos)
-        }, 3000)
+        }, 500)
+    })
+}
+
+export const obtenerProductosPorCategoria = (categoryId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(productos.filter(prod => prod.categoria === categoryId))
+        }, 500)
+    })
+}
+
+export const obtenerProductosPorId = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(productos.find(prod => prod.id === id))
+        }, 500)
     })
 }

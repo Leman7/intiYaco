@@ -36,8 +36,6 @@ const Counter = () => {
         setCount(count - 1)
     }
 
-
-    console.log('render')
     return (
         <div>
             <h1>{title}</h1>

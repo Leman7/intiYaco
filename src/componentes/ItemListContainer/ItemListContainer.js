@@ -1,24 +1,33 @@
 import './ItemListContainer.css'
 import { useState, useEffect  } from 'react'
-import { obtenerProductos } from '../Productos/Productos'
+import { obtenerProductos, obtenerProductosPorCategoria } from '../Productos/Productos'
 import ItemList from '../ItemList/ItemList'
+import {useParams} from 'react-router-dom'
 
 
 const ItemListContainer = ({saludo}) => {
     const [productos, listarProductos] = useState([])
 
+    const {categoryId} = useParams()
+
     useEffect(() => {
-        obtenerProductos().then(productos => {
-            listarProductos(productos)
-        })
-    }, [])
+
+        if(!categoryId) {
+            obtenerProductos().then(productos => {
+                listarProductos(productos)
+            })
+
+        } else  {
+            obtenerProductosPorCategoria(categoryId).then(productos => {
+                listarProductos(productos)
+            })
+        }
+
+    }, [categoryId])
 
     return (
         <>
             <h1 className='nuestrosProductos'>{saludo}</h1>
-            {/* <ul>    
-                {productos.map(prod => <li key={prod.id}>{prod.nombre}</li>)}
-            </ul> */}
             <ItemList productos={productos}/>
         </>
     )

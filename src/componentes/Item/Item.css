@@ -15,3 +15,8 @@
 .stockProductos {
     text-align: center;
 }
+
+.botonDetalle {
+    display: flex;
+    justify-content: center;
+}

@@ -25,8 +25,8 @@ const Contador = ({ stock, onAdd }) => {
             <div className="contieneBotonesContador">
                 <button onClick={incrementar}>+</button>
                 <button onClick={decrementar}>-</button>
-                <button onClick={() => onAdd(count)}>Agregar al carrito</button>
-            </div>
+            </div>         
+            <button onClick={() => onAdd(count)}>Agregar al carrito</button>
         </div>
     )
 }
