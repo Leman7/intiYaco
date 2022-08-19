@@ -1,10 +1,10 @@
 import './ItemList.css'
 import Item from "../Item/Item"
 
-const ItemList = ({productos}) => {
+const ItemList = ({products}) => {
     return (
         <ul className="contenedorCatalogo">    
-            {productos.map(prod => <Item key={prod.id} productos = {prod}/>)}
+            {products.map(prod => <Item key={prod.id} {...prod}/>)}
         </ul>
     )
 }

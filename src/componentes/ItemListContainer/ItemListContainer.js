@@ -1,25 +1,25 @@
 import './ItemListContainer.css'
 import { useState, useEffect  } from 'react'
-import { obtenerProductos, obtenerProductosPorCategoria } from '../Productos/Productos'
+import { getProducts, getProductsByCategory } from '../Products/Products'
 import ItemList from '../ItemList/ItemList'
 import {useParams} from 'react-router-dom'
 
 
 const ItemListContainer = ({saludo}) => {
-    const [productos, listarProductos] = useState([])
+    const [products, setProducts] = useState([])
 
     const {categoryId} = useParams()
 
     useEffect(() => {
 
         if(!categoryId) {
-            obtenerProductos().then(productos => {
-                listarProductos(productos)
+            getProducts().then(products => {
+                setProducts(products)
             })
 
         } else  {
-            obtenerProductosPorCategoria(categoryId).then(productos => {
-                listarProductos(productos)
+            getProductsByCategory(categoryId).then(products => {
+                setProducts(products)
             })
         }
 
@@ -28,7 +28,7 @@ const ItemListContainer = ({saludo}) => {
     return (
         <>
             <h1 className='nuestrosProductos'>{saludo}</h1>
-            <ItemList productos={productos}/>
+            <ItemList products={products}/>
         </>
     )
 }

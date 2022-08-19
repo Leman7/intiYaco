@@ -1,0 +1,28 @@
+.contenedorContador {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    margin: auto;
+}
+
+.numeroStock {
+    margin: auto;
+    text-align: center;
+}
+
+.contenedorBotonesContador {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.botonesContador {
+    padding: 10px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10%;
+    cursor: pointer;
+}

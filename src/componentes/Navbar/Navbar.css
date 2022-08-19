@@ -21,3 +21,15 @@
     align-items: center;
 }
 
+.botonesNavegacion {
+    text-decoration: none;
+    background-color: grey;
+    color: black;
+    border-radius: 20%;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
